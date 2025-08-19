@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(to right bottom, #e0f2fe, #dbeafe);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+.auth-card {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 10px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+  direction: ltr;
+}
+.auth-card h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+.auth-card .sub-heading {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+.input-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.auth-input {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+  padding-left: 2.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  background-color: #f8fafc;
+  font-size: 1rem;
+  color: #4a5568;
+  transition: all 0.2s ease-in-out;
+  text-align: left;
+}
+.auth-input:focus {
+  outline: none;
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.25);
+  background-color: #ffffff;
+}
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  pointer-events: none;
+}
+.error-message {
+  color: #ef4444;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  text-align: left;
+}
+.auth-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #ef4444; /* Changed to red for logout */
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 1.5rem;
+}
+.auth-button:hover {
+  background-color: #dc2626; /* Darker red on hover */
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.5);
+  transform: translateY(-2px);
+}
+.auth-button:disabled {
+  background: #a78bfa;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+.form-footer-text {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+.auth-link {
+  font-weight: 600;
+  color: #8b5cf6;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+.auth-link:hover {
+  color: #7c3aed;
+  text-decoration: underline;
+}
+.system-message {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+.system-message.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.system-message.success {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+.system-message.error {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+.profile-info {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+.profile-info p {
+  font-size: 1.1rem;
+  color: #334155;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px dashed #e2e8f0;
+}
+.profile-info p:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.profile-info p span {
+  font-weight: 600;
+  color: #1a202c;
+  margin-right: 0.5rem;
+}
+@media (max-width: 640px) {
+  .auth-card {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 95%;
+  }
+  .auth-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .auth-input {
+    padding: 0.6rem 1rem;
+    padding-left: 2.5rem;
+    font-size: 0.9rem;
+  }
+  .input-icon {
+    left: 0.75rem;
+    font-size: 0.9rem;
+  }
+  .auth-button {
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+  }
+  .system-message {
+    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+  }
+}
