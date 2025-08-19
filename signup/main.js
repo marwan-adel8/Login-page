@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     signupForm.reset();
     setTimeout(() => {
-      window.location.href = "../login/login.html";
+      window.location.href = "/login/login.html";
     }, 2000);
   });
 });
